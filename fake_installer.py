@@ -78,6 +78,7 @@ funny_messages = [
     "Simulating a blue screen of happiness..."
 ]
 
+
 def fake_progress_bar(total, prefix='Progress', length=40):
     for i in range(total + 1):
         percent = int(100 * i / total)
@@ -88,13 +89,14 @@ def fake_progress_bar(total, prefix='Progress', length=40):
         time.sleep(0.05)
     print()
 
+
 def main():
     print("Welcome to the Totally Legit Installer v1.0")
     time.sleep(1)
     print("Starting installation...\n")
     time.sleep(1)
 
-    for i in range(25):
+    for _ in range(25):
         fake_file = random.choice(fake_files)
         message = random.choice(funny_messages)
         print(f"Processing {fake_file}...")
@@ -105,6 +107,7 @@ def main():
 
     print("Installation complete! (Or is it?) 😏")
     print("Thank you for trusting us with your imaginary files.")
+
 
 if __name__ == "__main__":
     main()
